@@ -1,0 +1,27 @@
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:8px;
+    margin-bottom:15px;
+}
+<script>
+const videos = [
+    "videos/video1.mp4",
+    "videos/video2.mp4",
+    "videos/video3.mp4"
+];
+
+let currentVideo = 0;
+const player = document.getElementById("workVideo");
+
+player.addEventListener("ended", function () {
+    currentVideo++;
+    if (currentVideo >= videos.length) {
+        currentVideo = 0;
+    }
+
+    player.src = videos[currentVideo];
+    player.play();
+});
+</script>

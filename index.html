@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" href="images/logo2.png" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Guard Paving | Driveways, Patios, Block Paving & Jet Washing</title>
+<meta name="description" content="Royal Guard Paving provides professional driveways, patios, block paving and jet washing services across Kent, London and surrounding areas. Free quotes available.">
+<meta name="keywords" content="Royal Guard Paving, Driveways, Patios, Block Paving, Jet Washing, Kent, London">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+
+body{
+    background:radial-gradient(circle at center,#b91c1c,#7f1d1d,#450a0a);
+    color:white;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 5%;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.logo img{height:280px}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-size:20px;
+}
+
+.call-btn{
+    background:#fbbf24;
+    color:black;
+    padding:15px 25px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.hero{text-align:center;padding:80px 20px}
+.hero h1{font-size:4rem;margin-bottom:20px}
+.hero p{max-width:800px;margin:auto;font-size:1.4rem}
+
+.services{
+    width:90%;
+    margin:50px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,.08);
+    border-radius:15px;
+    overflow:hidden;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    background:white;
+    color:black;
+    text-align:center;
+    padding:15px;
+    font-size:28px;
+}
+
+.card p{padding:20px}
+
+.showcase,.about{
+    width:90%;
+    margin:80px auto;
+    text-align:center;
+}
+
+.showcase h2,.about h2,.contact h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.showcase video{
+    width:100%;
+    max-width:1000px;
+    border-radius:15px;
+}
+
+.contact{
+    background:black;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.contact a{
+    display:inline-block;
+    margin-top:20px;
+    background:#fbbf24;
+    color:black;
+    padding:15px 30px;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+footer{
+    background:#111;
+    text-align:center;
+    padding:20px;
+}
+
+/* GALLERY MODAL */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.95);
+    z-index:9999;
+}
+
+.modal-content{
+    max-width:1100px;
+    width:95%;
+    margin:auto;
+    text-align:center;
+    padding-top:40px;
+}
+
+.modal img{
+    width:100%;
+    max-height:75vh;
+    object-fit:contain;
+    border-radius:10px;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:30px;
+    font-size:45px;
+    cursor:pointer;
+}
+
+.gallery-controls{
+    margin-top:20px;
+}
+
+.gallery-controls button{
+    padding:12px 25px;
+    font-size:18px;
+    margin:0 10px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+.hero h1{font-size:2.5rem}
+nav{width:100%;text-align:center}
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"Royal Guard Paving",
+  "telephone":"07542785602",
+  "description":"Driveways, patios, block paving and jet washing services across Kent and London."
+}
+</script>
+
+</head>
+<body>
+
+<header>
+<div class="logo">
+<img src="images/logo.png" alt="Royal Guard Paving">
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<a class="call-btn" href="tel:07542785602">Call 07542 785602</a>
+</header>
+
+<section class="hero">
+<h1>Professional Driveway, Patio & Jet Washing Services</h1>
+<p>Quality paving and jet washing with disciplined, reliable service from an ex Queen's Guard covering Kent, London and surrounding areas.</p>
+<p>Here you can give us a call, request a free quote via email or find us on one of our socials linked at the bottom of our page. This is only the start of our adventure and were looking forward to help out as much as we can with our services. As we continue to grow we will have more to show.<p>
+</section>
+
+<section id="services" class="services">
+
+<div class="card" onclick="openGallery('block')">
+<img src="images/block1.jpg" alt="Block Paving">
+<h3>Block Paving</h3>
+<p>Beautiful and durable block paving installations for homes and businesses.</p>
+</div>
+
+<div class="card" onclick="openGallery('driveway')">
+<img src="images/driveway1.jpg" alt="Driveways">
+<h3>Driveways</h3>
+<p>High-quality driveways built to last with expert workmanship.</p>
+</div>
+
+<div class="card" onclick="openGallery('patio')">
+<img src="images/patio1.jpg" alt="Patios">
+<h3>Patios</h3>
+<p>Transform your garden with a stunning custom patio.</p>
+</div>
+
+<div class="card" onclick="openGallery('jet')">
+<img src="images/jet1.jpg" alt="Jet Washing">
+<h3>Jet Washing</h3>
+<p>Restore patios, paving and driveways to a like-new finish.</p>
+</div>
+
+</section>
+
+<section class="showcase">
+<h2>Our Recent Work</h2>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
+<video controls style="width:100%;border-radius:15px;">
+<source src="videos/43269.mp4" type="video/mp4">
+</video>
+
+<video controls style="width:100%;border-radius:15px;">
+<source src="videos/43270.mp4" type="video/mp4">
+</video>
+
+<video controls style="width:100%;border-radius:15px;">
+<source src="videos/43271.mp4" type="video/mp4">
+</video>
+
+<video controls style="width:100%;border-radius:15px;">
+<source src="videos/43273.mp4" type="video/mp4">
+</video>
+</div>
+
+</section>
+
+<section id="about" class="about">
+<h2>Why Choose Royal Guard Paving?</h2>
+<p>As an ex Queen's Guard, discipline, attention to detail and professionalism are at the heart of everything we do.</p>
+</section>
+
+<section id="contact" class="contact">
+<h2>Get Your Free Quote Today</h2>
+<p><strong>07542 785602</strong></p>
+<a href="tel:07542785602">CALL NOW</a>
+</section>
+
+<footer>
+    <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=61585756397612" target="_blank">📘 Facebook</a>
+        <a href="https://www.tiktok.com/@royal.guard.pavin" target="_blank">🎵 TikTok</a>
+    </div>
+
+    <p>© 2026 Royal Guard Paving | Covering Kent & London</p>
+	Royal Guard Paving
+Driveways • Patios • Block Paving • Jet Washing
+Call: 07542 785602
+</footer>
+
+<div id="galleryModal" class="modal">
+<span class="close" onclick="closeGallery()">&times;</span>
+
+<div class="modal-content">
+<h2 id="galleryTitle"></h2>
+<img id="galleryImage" src="">
+
+<div class="gallery-controls">
+<button onclick="prevImage()">◀ Previous</button>
+<button onclick="nextImage()">Next ▶</button>
+</div>
+</div>
+</div>
+
+<script>
+const galleries = {
+block:[
+"images/block1.jpg",
+"images/block2.jpg",
+"images/block3.jpg",
+"images/block4.jpg",
+"images/block5.jpg"
+],
+driveway:[
+"images/driveway1.jpg",
+"images/driveway2.jpg",
+"images/driveway3.jpg",
+"images/driveway4.jpg",
+"images/driveway5.jpg"
+],
+patio:[
+"images/patio1.jpg",
+"images/patio2.jpg",
+"images/patio3.jpg",
+"images/patio4.jpg",
+"images/patio5.jpg"
+],
+jet:[
+"images/jet1.jpg",
+]
+};
+
+let currentGallery=[];
+let currentIndex=0;
+
+function openGallery(type){
+currentGallery=galleries[type];
+currentIndex=0;
+
+document.getElementById('galleryTitle').innerText =
+type.charAt(0).toUpperCase()+type.slice(1)+" Gallery";
+
+document.getElementById('galleryImage').src=currentGallery[currentIndex];
+document.getElementById('galleryModal').style.display='block';
+}
+
+function closeGallery(){
+document.getElementById('galleryModal').style.display='none';
+}
+
+function nextImage(){
+currentIndex=(currentIndex+1)%currentGallery.length;
+document.getElementById('galleryImage').src=currentGallery[currentIndex];
+}
+
+function prevImage(){
+currentIndex=(currentIndex-1+currentGallery.length)%currentGallery.length;
+document.getElementById('galleryImage').src=currentGallery[currentIndex];
+}
+</script>
+
+</body>
+</html>
